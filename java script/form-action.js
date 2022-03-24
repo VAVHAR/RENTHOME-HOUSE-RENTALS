@@ -5,8 +5,7 @@ function form1div()
   if(div1.style.display==="block")
   {
     div1.style.display = "none";
-  }
-  
+  } 
 }
 
 function myFunction() {
