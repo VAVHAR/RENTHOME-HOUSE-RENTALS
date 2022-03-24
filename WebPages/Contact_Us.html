@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <title>
+    Vila
+  </title>
+
+  <link rel="stylesheet" type="text/css" href="../css/menu.css">
+  <link rel="stylesheet" type="text/css" href="../css/pagestyle.css">
+  <link rel="stylesheet" type="text/css" href="../css/tabs.css">
+  <link rel="stylesheet" type="text/css" href="../css/form.css">
+
+  <script src="../java script/form-action.js">
+
+  </script>
+</head>
+
+<body onload="form1diiv()">
+
+
+
+  <!-- SECTION FOR HEADER-->
+
+  <header>
+    <div id="content">
+      <div id="left" style="width: 200px;">
+        <img src="../images/RentHome.png" alt="RentHome Logo">
+      </div>
+
+      <div id="right">
+        <p class="header_text">RENTHOME HOUSE RENTALS</p>
+      </div>
+    </div>
+    <div class="hori_menu">
+      <ul>
+        <li><a href="../home.html">Home</a></li>
+        <li><a href="../WebPages/Condo.html">Condo</a></li>
+        <li><a href="../WebPages/TownHouse.html">Town House</a></li>
+        <li><a href="../WebPages/Apartment.html">Apartment</a></li>
+        <li><a href="../WebPages/Villa.html">Villa</a></li>
+        <li><a class="active" href="../WebPages/Contact_Us.html">Contact Us</a></li>
+        <li><a onclick="history.back()">Back</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <div style="display: flex;">
+    <div id="left">
+      <div class="vertical-menu">
+        <a>Address</a>
+        <a href="#">Call</a>
+        <a id="a-email" onclick="myFunction()">E-Mail</a>
+        <a id="a-chat" onclick="myFunction2()"">Chat</a>
+      </div>
+    </div>
+
+    <div id=" right" style="text-align: center;">
+
+      <div id="form1div">
+        <div id="form1-title">
+          <p class="home_info_title">&diams; E-Mail &diams;
+            <hr /><br /></p>
+        </div>
+
+        <form id="form1">
+          <label for="eadd">Email Address</label>
+          <input type="text" id="eadd" name="Email" placeholder="Your Email Address..">
+
+          <label for="topic">Topic</label>
+          <input type="text" id="topic" name="Topic" placeholder="Your Topic..">
+
+          <label for="subject">Text</label>
+          <textarea id="text" name="text" placeholder="Write the Text.." style="height:200px"></textarea>
+
+          <input type="submit" value="Submit" onclick="ValidateEmail()">
+        </form>
+      </div>
+        
+
+          <div id="form2-title">
+            <p class="home_info_title">&diams; Chat &diams;
+              <hr /><br /></p>
+          </div>
+
+          <!-- Form for the e-mail tab -->
+         
+
+          <!-- Form for the chat tab -->
+          <form id="form2">
+
+            <label for="Message">Message</label>
+            <textarea id="Message" name="Message" placeholder="Write the Message.." style="height:200px"></textarea>
+
+            <input type="submit" value="Submit">
+          </form>
+
+
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
