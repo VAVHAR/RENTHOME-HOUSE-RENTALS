@@ -41,7 +41,6 @@ body {
   color: #262261;
   text-align: center;
   font-family: "Merriweather Sans", sans-serif;
-  font-weight: normal;
 }
 
 .home_info_content {
@@ -224,6 +223,7 @@ hr {
   padding: .5em .75em;
   border-radius: .25em;
   cursor: pointer;
+  src :url("../WebPages/Contact_Us.html");
 }
 
 .btn:hover,

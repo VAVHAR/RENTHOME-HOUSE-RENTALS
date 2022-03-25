@@ -5,7 +5,7 @@
 <head>
 
   <title>
-    Vila
+    Contact Us
   </title>
 
   <link rel="stylesheet" type="text/css" href="../css/menu.css">
@@ -18,10 +18,7 @@
   </script>
 </head>
 
-<body onload="form1diiv()">
-
-
-
+<body onload="hide()">
   <!-- SECTION FOR HEADER-->
 
   <header>
@@ -47,61 +44,92 @@
     </div>
   </header>
 
-  <div style="display: flex;">
+  <div style="display: flex; margin-bottom: 10px;">
     <div id="left">
       <div class="vertical-menu">
-        <a>Address</a>
-        <a href="#">Call</a>
-        <a id="a-email" onclick="myFunction()">E-Mail</a>
-        <a id="a-chat" onclick="myFunction2()"">Chat</a>
+        <a id ="a-add" onclick="address()">Address</a>
+        <a href="#" onclick="call()">Call</a>
+        <a id="a-email" onclick="email()">E-Mail</a>
+        <a id="a-chat" onclick="chat()"">Chat</a>
       </div>
     </div>
 
-    <div id=" right" style="text-align: center;">
+    <div id="right" style="text-align: center;">
 
-      <div id="form1div">
+      <!-- SECTION FOR TAB OF ADDRESS -->
+       <div id="tab-address" class="tab-add">
+         <p>RENTHOME HOUSE RENTALS</p><hr />
+         <p style="text-align: center;">4810,Ch Queen Mary <br /> Montreal , QC <br> H3W 1W9</p>
+         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2797.089343519497!2d-73.62692768458085!3d45.48814557910124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc919fcf9da6a5d%3A0x8977fd3fc185052a!2s4810%20Queen%20Mary%20Rd%2C%20Montreal%2C%20QC%20H3W%201W9!5e0!3m2!1sen!2sca!4v1648236340053!5m2!1sen!2sca" width="600" height="450" style="border: 2px #45a049 solid;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+       </div>
+
+       <!-- SECTION FOR THE TAB OF CALL -->
+
+       <div id="tab-call" class="tab-calling">
+        <p>RENTHOME HOUSE RENTALS</p><hr />
+        <p>Call US:</p>
+         <a href="tel: +1514-585-8481"> + 514-585-8481</a>
+       </div>
+
+       <!-- SECTION FOR TAB OF EMAIL -->
+
+       <div id="tab-email">
+         
         <div id="form1-title">
-          <p class="home_info_title">&diams; E-Mail &diams;
-            <hr /><br /></p>
-        </div>
-
-        <form id="form1">
+          <p class="home_info_title">
+            &diam; E-Mail &diam;
+            <hr/>
+          </p>
+         </div>
+        
+        <form id="form1" style="margin: 0px 50px;">
           <label for="eadd">Email Address</label>
           <input type="text" id="eadd" name="Email" placeholder="Your Email Address..">
-
+  
           <label for="topic">Topic</label>
           <input type="text" id="topic" name="Topic" placeholder="Your Topic..">
-
+  
           <label for="subject">Text</label>
           <textarea id="text" name="text" placeholder="Write the Text.." style="height:200px"></textarea>
-
-          <input type="submit" value="Submit" onclick="ValidateEmail()">
+  
+          <input id="eadd" type="submit" value="Submit" onclick="ValidateEmail()">
         </form>
-      </div>
-        
+       </div>
 
-          <div id="form2-title">
-            <p class="home_info_title">&diams; Chat &diams;
-              <hr /><br /></p>
-          </div>
+       <div id="tab-chat">
 
-          <!-- Form for the e-mail tab -->
-         
+        <div id="form2-title">
+          <p class="home_info_title">
+            &diam; Chat &diam;
+            <hr/>
+          </p>
+         </div>
 
-          <!-- Form for the chat tab -->
-          <form id="form2">
+         <form if="form2" style="margin: 0px 50px;">
+           <label for="Message">Message</label>
+           <textarea id="message" name="message" placeholder="Write Your Message Here" style="height:200px"></textarea>
 
-            <label for="Message">Message</label>
-            <textarea id="Message" name="Message" placeholder="Write the Message.." style="height:200px"></textarea>
+           <input id="echat" type="submit" value="Submit"">
+         </form>
+       </div>
 
-            <input type="submit" value="Submit">
-          </form>
-
-
-      </div>
+       
     </div>
   </div>
 
-</body>
+  <footer>
+    <div class="footer-content">
+        <h3>Renthome House Rentals</h3>
+        <hr />
+        <p> 1) HARDIK VAVIYA - 2102118 </p>
+        <p> 2) VIKAS MODI - 2102188 </p>
+        <p> 3) DEEPALI PATEL - 6158127</p>
 
+    </div>
+
+    <div class="footer-bottom">
+        <p>copyright Renthome House Rentals - Vaviya Hardik &COPY; 2022</p>
+    </div>
+</footer>
+</body>
 </html>

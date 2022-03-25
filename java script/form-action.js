@@ -1,60 +1,103 @@
-function form1div()
-{
-  var div1 = document.getElementById("form1div");
+function hide() {
+  var add = document.getElementById("tab-address");
+  var email = document.getElementById("tab-email");
+  var call = document.getElementById("tab-call");
+  var chat = document.getElementById("tab-chat");
 
-  if(div1.style.display==="block")
+  add.style.display = "block";
+  email.style.display = "none";
+  call.style.display = "none";
+  chat.style.display = "none";
+}
+
+function address() {
+
+  var add = document.getElementById("tab-address");
+  var email = document.getElementById("tab-email");
+  var call = document.getElementById("tab-call");
+  var chat = document.getElementById("tab-chat");
+  var aemail = document.getElementById("a-add");
+
+  if (add.style.display == "none") {
+    add.style.display = "block";
+    email.style.display = "none";
+    call.style.display = "none";
+    chat.style.display = "none";
+    aemail.classList.add("active"); 
+  } else
+
+    email.style.display = "none";
+  call.style.display = "none";
+  chat.style.display = "none";
+}
+
+function call() {
+  var add = document.getElementById("tab-address");
+  var email = document.getElementById("tab-email");
+  var call = document.getElementById("tab-call");
+  var chat = document.getElementById("tab-chat");
+
+  if (call.style.display == "none") {
+    call.style.display = "block";
+    add.style.display = "none";
+    email.style.display = "none";
+    chat.style.display = "none";
+
+  } else
+
   {
-    div1.style.display = "none";
-  } 
-}
-
-function myFunction() {
-  var x = document.getElementById("form1");
-  var y = document.getElementById("form2");
-  var aemail = document.getElementById("a-email");
-  var f1title = document.getElementById("form1-title");
-  var f2title = document.getElementById("form2-title");
-
-
-  if (x.style.display === "none") {
-    x.style.display = "block";
-    aemail.classList.add('active');
-    f1title.style.display = "block";
-    y.style.display = "none";
-    f2title.style.display = "none";
-  } else {
-    x.style.display = "none";
-    y.style.display = "none";
-    f1title.style.display = "none";
-    f2title.style.display = "none";
+    add.style.display = "none";
+    email.style.display = "none";
+    chat.style.display = "none";
   }
 }
 
-function myFunction2() {
-  var x = document.getElementById("form1");
-  var y = document.getElementById("form2");
-  var f2title = document.getElementById("form2-title");
-  if (y.style.display === "none") {
-    y.style.display = "block";
-    x.style.display = "none";
-    f2title.style.display = "block";
-  } else {
-    y.style.display = "none";
-    f2title.style.display = "none";
+function email() {
 
-  }
+  var add = document.getElementById("tab-address");
+  var email = document.getElementById("tab-email");
+  var call = document.getElementById("tab-call")
+  var chat = document.getElementById("tab-chat");
+
+  if (email.style.display == "none") {
+    email.style.display = "block";
+    add.style.display = "none";
+    call.style.display = "none";
+    chat.style.display = "none";
+
+  } else
+
+   add.style.display = "none";
+  call.style.display = "none";
+  chat.style.display = "none";
+}
+
+function chat() {
+  var add = document.getElementById("tab-address");
+  var email = document.getElementById("tab-email");
+  var call = document.getElementById("tab-call")
+  var chat = document.getElementById("tab-chat");
+
+  if (chat.style.display == "none") {
+    chat.style.display = "block";
+    add.style.display = "none";
+    call.style.display = "none";
+    email.style.display = "none";
+
+  } else
+  email.style.display = "none";
+  add.style.display = "none";
+  call.style.display = "none";
 }
 
 function ValidateEmail() {
   var inputText = document.getElementById("eadd");
-  var mailformat = /@vaniercollege.qc.ca/;
+  var mailformat = /@edu.vaniercollege.qc.ca/;
   if (inputText.value.match(mailformat)) {
     alert("Valid email address!");
-    document.form1.Email.focus();
     return true;
   } else {
     alert("You have entered an invalid email address!");
-    document.form1.Email.focus();
     return false;
   }
 }
