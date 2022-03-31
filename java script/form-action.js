@@ -1,13 +1,22 @@
-function hide() {
-  var add = document.getElementById("tab-address");
-  var email = document.getElementById("tab-email");
-  var call = document.getElementById("tab-call");
-  var chat = document.getElementById("tab-chat");
+function eventadd()
+{
+  document.getElementById("a-add").addEventListener("click",address);
+  document.getElementById("a-call").addEventListener("click",call);
+  document.getElementById("a-email").addEventListener("click",email);
+  document.getElementById("a-chat").addEventListener("click",chat);
+  document.getElementsByClassName("btn btn-outline").addEventListener("click",conus);
+}
 
-  add.style.display = "block";
-  email.style.display = "none";
-  call.style.display = "none";
-  chat.style.display = "none";
+function conus()
+{
+  window.location.href='Contact_Us.html'
+}
+
+function hide() {
+  var add = document.getElementById("tab-address").style.display = "block";
+  var email = document.getElementById("tab-email").style.display = "none";
+  var call = document.getElementById("tab-call").style.display = "none";
+  var chat = document.getElementById("tab-chat").style.display = "none";
 }
 
 function address() {
@@ -101,3 +110,5 @@ function ValidateEmail() {
     return false;
   }
 }
+debugger;
+window.onload(eventadd(),hide(),conus());
