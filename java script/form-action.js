@@ -121,5 +121,6 @@ function ValidateEmail() {
   }
 }
 
-// JS to load the script of windows load .
+// JS to load the script of windows load 
+
 window.onload(eventadd(),hide());
