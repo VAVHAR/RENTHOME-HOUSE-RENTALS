@@ -4,21 +4,14 @@ function eventadd()
   document.getElementById("a-call").addEventListener("click",call);
   document.getElementById("a-email").addEventListener("click",email);
   document.getElementById("a-chat").addEventListener("click",chat);
-  document.getElementsByClassName("btn btn-outline").addEventListener("click",conus);
 }
-
-function conus()
+function hide() 
 {
-  window.location.href='Contact_Us.html'
-}
-
-function hide() {
   var add = document.getElementById("tab-address").style.display = "block";
   var email = document.getElementById("tab-email").style.display = "none";
   var call = document.getElementById("tab-call").style.display = "none";
   var chat = document.getElementById("tab-chat").style.display = "none";
 }
-
 function address() {
 
   var add = document.getElementById("tab-address");
@@ -103,7 +96,6 @@ function ValidateEmail() {
   var inputText = document.getElementById("eadd");
   var mailformat = /@edu.vaniercollege.qc.ca/;
   if (inputText.value.match(mailformat)) {
-    alert("Valid email address!");
     return true;
   } else {
     alert("You have entered an invalid email address!");
@@ -111,4 +103,4 @@ function ValidateEmail() {
   }
 }
 debugger;
-window.onload(eventadd(),hide(),conus());
+window.onload(eventadd(),hide());
