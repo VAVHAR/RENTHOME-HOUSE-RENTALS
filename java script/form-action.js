@@ -1,3 +1,5 @@
+// JS for the event listner
+
 function eventadd()
 {
   document.getElementById("a-add").addEventListener("click",address);
@@ -5,6 +7,8 @@ function eventadd()
   document.getElementById("a-email").addEventListener("click",email);
   document.getElementById("a-chat").addEventListener("click",chat);
 }
+
+// JS to hdie the tabs in contact us page with windwos on load.
 function hide() 
 {
   var add = document.getElementById("tab-address").style.display = "block";
@@ -12,6 +16,9 @@ function hide()
   var call = document.getElementById("tab-call").style.display = "none";
   var chat = document.getElementById("tab-chat").style.display = "none";
 }
+
+// JS for the tab of address in contact us page
+
 function address() {
 
   var add = document.getElementById("tab-address");
@@ -32,6 +39,9 @@ function address() {
   call.style.display = "none";
   chat.style.display = "none";
 }
+
+// JS for the tab of call in contact us page
+
 
 function call() {
   var add = document.getElementById("tab-address");
@@ -54,6 +64,10 @@ function call() {
   }
 }
 
+
+// JS for the tab of email in contact us page
+
+
 function email() {
 
   var add = document.getElementById("tab-address");
@@ -74,6 +88,8 @@ function email() {
   chat.style.display = "none";
 }
 
+// JS for the tab of chat in contact us page
+
 function chat() {
   var add = document.getElementById("tab-address");
   var email = document.getElementById("tab-email");
@@ -92,6 +108,8 @@ function chat() {
   call.style.display = "none";
 }
 
+// JS for the validation of email with vanier email id in email tab in conatact us page
+
 function ValidateEmail() {
   var inputText = document.getElementById("eadd");
   var mailformat = /@edu.vaniercollege.qc.ca/;
@@ -102,5 +120,6 @@ function ValidateEmail() {
     return false;
   }
 }
-debugger;
+
+// JS to load the script of windows load .
 window.onload(eventadd(),hide());
