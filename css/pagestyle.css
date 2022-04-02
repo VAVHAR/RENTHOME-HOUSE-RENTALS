@@ -115,6 +115,10 @@ footer {
   font-size: 14px;
   color: #cacdd2;
 }
+.footer-content a{
+  text-decoration-line: none;
+color: white;
+}
 
 .footer-bottom {
   background: #30323D;
